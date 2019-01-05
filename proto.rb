@@ -1,40 +1,4 @@
-
-
-class Responder
-    def initialize(name)
-        @name = name
-    end
-
-    def response(input)
-        input = input + "ってなに？"
-        return input
-    end
-
-    def name
-        return @name
-    end
-end
-
-
-class Unmo
-    def initialize(name)
-        @name = name
-        @responder = Responder.new('What')
-    end
-
-    def dialog (input)
-        return @responder.response(input)
-    end
-
-    def responder_name
-        return @responder.name
-    end
-
-    def name 
-        return @name
-    end
-end
-
+require './unmo.rb'
     def prompt(unmo)
         return unmo.name + ':' + unmo.responder_name + '>'
     end
